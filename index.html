@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+      <header> JS Handson 6 <br>
+     problem sloving</header>
+    <div class="box">1.find smaller age ? <br> 
+    <pre>var Minimal_Angle = (h, m) => 
+        {
+          h=h%12;
+          let hours=(h*360)/12 +(m*360)/(12*60);
+          let min =(m*360)/(60);
+          let angle =Math.abs(hours-min);
+          if (angle>180){
+            angle = 360-180;
+          }
+          return angle;
+        };
+        </pre> </div>
+    <div class="box"> 2.check wheather year is leap or not ? <br>
+    <pre>var Check_Leap = (year) => 
+        {
+         
+          return year%4===0?(year%100===0?(year%400===0?"Leap Year":"Non Leap Year"):"Leap Year"):"Non Leap Year"
+        
+        
+        
+        };
+         </pre></div>
+    <div class="box"> 3. perfect number check ? <br> 
+    <pre>var Perfect_Check = (N) => 
+        {
+            sum = 1;
+          if(N===1){
+            return "YES"
+          }
+          else if(N%2===1){
+            return "NO"
+          }
+          else{
+            
+            for(let i=2;i*i<=N;i++){
+              if(N%i===0){
+                sum += i+N/i
+              }
+            }
+            
+            return sum===N?"YES":"NO"
+          }
+           
+                
+        };
+         </pre></div>
+    <div class="box">4. reverse the number ? <br> 
+    <pre>var Reverse_Number = (N) => 
+        {
+           rev = 0
+          while(N>0){
+            r = N%10;
+            rev = rev*10+r
+            N = parseInt(N/10);
+            
+          }
+        return rev
+        
+        
+        };</pre></div>
+    <div class="box"> 5.sub string check ? <br> 
+    <pre>var Substring_Check = (S1, S2) => 
+        {
+           const arr = S1.split(" ")
+          for(let i=0;i < arr.length;i++){
+            if(arr[i] === S2){
+              return "YES"
+            }
+         }
+        return "NO"  
+        };
+         </pre></div>
+    
+</body>
+</html>
